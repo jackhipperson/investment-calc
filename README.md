@@ -1,9 +1,10 @@
-# Investment Calculator
+# Investment Calculator + Cypress Testing
 
 <p float="left">
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
 <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" />
+<img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white" />
 </p>
 
 Welcome to the Investment Calculator! This tool helps you to calculate the future value of your investments by inputting the principal amount, the annual interest rate, and the number of years. 
@@ -53,8 +54,21 @@ https://jackhipperson.github.io/investment-calc/
     ```
 4. **Run NPM**
    ```bash
-   npm start
+   npm run dev
    ```
+---
+
+## Running Cypress Testing
+Make sure you have cloned and started NPM as per the 'How to Run Locally' section
+
+1. **Open The Cypress Test Window**:
+      ```bash
+   npx cypress open
+   ```
+2. **Select e2e testing and choose e2etesting**
+3. **Select Chrome for testing** or the browser of your choice - test have been set up using Chrome
+4. **Select e2etesting**
+
 ---
 
 Thanks for using the Investment Calculator! Happy Investing!
