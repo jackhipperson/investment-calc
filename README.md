@@ -1,5 +1,9 @@
 # Investment Calculator
 
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" />
+
 Welcome to the Investment Calculator! This tool helps you to calculate the future value of your investments by inputting the principal amount, the annual interest rate, and the number of years. 
 
 Check it out live: [Investment Calculator](https://jackhipperson.github.io/investment-calc/)
