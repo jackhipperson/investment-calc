@@ -1,5 +1,5 @@
-import InputForm from "./components/InputForm"
-import Header from "./components/Header"
+import InputForm from "./components/InputForm.jsx"
+import Header from "./components/Header.jsx"
 import Table from "./components/Table.jsx"
 import { useState } from "react"
 
@@ -67,7 +67,7 @@ function App() {
     <div className="mx-auto text-center">
       <Header />
       <InputForm onCalculate={onCalculate} onClear={onClear} />
-      {tableData.length === 0 ? <p className="text-white p-4">Enter data and click Calculate to see results!</p> :
+      {tableData.length === 0 ? <p className="text-white p-4" data-cy="assistance-text">Enter data and click Calculate to see results!</p> :
         <Table tableData={tableData} />}
     </div>
   )

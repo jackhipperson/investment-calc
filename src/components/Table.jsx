@@ -2,7 +2,7 @@ function Table(props) {
 
     return (
         <div className="overflow-x-auto">
-            <table className="table-auto mx-auto text-white p-4 text-xs sm:text-base">
+            <table data-cy="results-table" className="table-auto mx-auto text-white p-4 text-xs sm:text-base">
                 <thead className="text-gray-300">
                     <tr>
                         <th scope="col" className="px-6 py-3">Year</th>

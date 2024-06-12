@@ -94,25 +94,25 @@ function InputForm(props) {
             <div className="rounded shadow-lg bg-[#134611] p-4 max-w-3xl mx-auto text-xs sm:text-base">
                 <div className="grid grid-flow-row-dense grid-cols-2 p-2 items-end">
                     <div className="flex flex-col items-start p-2">
-                        <label className="text-white text-left text-bold w-[100%]">CURRENT SAVINGS (£)</label>
-                        <input type="number" min="0.00" step="0.01" max="1000000000.00" className={currentError ? errorStyle : noErrorStyle} value={inputData.currentSavings} onChange={(event) => changeHandler('current-savings', event.target.value)}></input>
+                        <label className="text-white text-left text-bold w-[100%]" data-cy="label0">CURRENT SAVINGS (£)</label>
+                        <input type="number" min="0.00" step="0.01" max="1000000000.00" required data-cy="field0" className={currentError ? errorStyle : noErrorStyle} value={inputData.currentSavings} onChange={(event) => changeHandler('current-savings', event.target.value)}></input>
                     </div>
                     <div className="flex flex-col items-start p-2">
-                        <label className="text-white text-left text-bold w-[100%]">YEARLY SAVINGS (£)</label>
-                        <input type="number" min="0.00" step="0.01" max="1000000000.00" className={yearlyError ? errorStyle : noErrorStyle} value={inputData.yearlySavings} onChange={(event) => changeHandler('yearly-savings', event.target.value)}></input>
+                        <label className="text-white text-left text-bold w-[100%]" data-cy="label1">YEARLY SAVINGS (£)</label>
+                        <input type="number" min="0.00" step="0.01" max="1000000000.00" required data-cy="field1" className={yearlyError ? errorStyle : noErrorStyle} value={inputData.yearlySavings} onChange={(event) => changeHandler('yearly-savings', event.target.value)}></input>
                     </div>
                     <div className="flex flex-col items-start p-2">
-                        <label className="text-white text-left text-bold w-[100%]">EXPECTED INTEREST RATE (%) PER YEAR</label>
-                        <input type="number" min="0.01" step="0.01" max="500000.00" className={interestError ? errorStyle : noErrorStyle} value={inputData.interestRate} onChange={(event) => changeHandler('interest-rate', event.target.value)}></input>
+                        <label className="text-white text-left text-bold w-[100%]" data-cy="label2">EXPECTED INTEREST RATE (%) PER YEAR</label>
+                        <input type="number" min="0.01" step="0.01" max="500000.00" required data-cy="field2" className={interestError ? errorStyle : noErrorStyle} value={inputData.interestRate} onChange={(event) => changeHandler('interest-rate', event.target.value)}></input>
                     </div>
                     <div className="flex flex-col items-start p-2">
-                        <label className="text-white text-left text-bold w-[100%]">INVESTMENT PERIOD (YEARS)</label>
-                        <input type="number" min="1" step="1" max="10000" className={numYearsError ? errorStyle : noErrorStyle} value={inputData.numYears} onChange={(event) => changeHandler('num-years', event.target.value)}></input>
+                        <label className="text-white text-left text-bold w-[100%]" data-cy="label3">INVESTMENT PERIOD (YEARS)</label>
+                        <input type="number" min="1" step="1" max="1000" data-cy="field3" required className={numYearsError ? errorStyle : noErrorStyle} value={inputData.numYears} onChange={(event) => changeHandler('num-years', event.target.value)}></input>
                     </div>
                 </div>
                 <div className="p-4">
-                    <button type="button" className="text-base transition ease-in-out delay-150 p-3 text-white hover:-translate-y-1 hover:scale-100 duration-300" onClick={clearHandler}>Clear</button>
-                    <button className="text-base transition ease-in-out delay-150 p-3 text-white border-white border rounded bg-[#0a3009] hover:-translate-y-1 hover:scale-100 duration-300">Calculate</button>
+                    <button type="button" data-cy="clear-button" className="text-base transition ease-in-out delay-150 p-3 text-white hover:-translate-y-1 hover:scale-100 duration-300" onClick={clearHandler}>Clear</button>
+                    <button data-cy="calculate-button" className="text-base transition ease-in-out delay-150 p-3 text-white border-white border rounded bg-[#0a3009] hover:-translate-y-1 hover:scale-100 duration-300">Calculate</button>
                 </div>
             </div>
         </form>
