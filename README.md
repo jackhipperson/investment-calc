@@ -9,7 +9,7 @@
 
 Welcome to the Investment Calculator! This tool helps you to calculate the future value of your investments by inputting the principal amount, the annual interest rate, and the number of years. 
 
-Check it out live: [Investment Calculator](https://jackhipperson.github.io/investment-calc/)
+Check it out live: [Investment Calculator](https://jackhipperson.github.io/investment-calc-with-cypress/)
 
 ## Features
 
@@ -28,7 +28,7 @@ Check it out live: [Investment Calculator](https://jackhipperson.github.io/inves
 
 ## Demo
 
-https://jackhipperson.github.io/investment-calc/
+https://jackhipperson.github.io/investment-calc-with-cypress/
 
 ## Technologies Used
 
