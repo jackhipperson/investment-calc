@@ -41,12 +41,12 @@ https://jackhipperson.github.io/investment-calc-with-cypress/
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/investment-calc.git
+    git clone https://github.com/yourusername/investment-calc-with-cypress.git
     ```
 
 2. **Navigate to the Project Directory**:
     ```bash
-    cd investment-calc
+    cd investment-calc-with-cypress
     ```
 
 3. **Install NPM Packages**:
