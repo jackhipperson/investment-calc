@@ -1,4 +1,4 @@
-// the below javascript function creates an oject within an array that can be used in test-data.js and ran in result-testing.cy.js
+// The below javascript function creates an oject within an array that can be used in test-data.js and ran in result-testing.cy.js
 
 
 function createTestData(numCases) {

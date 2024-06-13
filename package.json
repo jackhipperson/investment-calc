@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://jackhipperson.github.io/investment-calc/",
+  "homepage": "https://jackhipperson.github.io/investment-calc-with-cypress/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",

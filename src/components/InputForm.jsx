@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function InputForm(props) {
 
+    // Set the inital structure and state of the input data
     const initialState = {
         currentSavings: "",
         yearlySavings: "",
@@ -9,12 +10,15 @@ function InputForm(props) {
         numYears: ""
     }
 
+    // State to hold input form data
     const [inputData, setInputData] = useState(initialState)
+    // States below contain booleans to show if there is an issue with input fields to adjust formatting
     const [currentError, setCurrentError] = useState(false)
     const [yearlyError, setYearlyError] = useState(false)
     const [interestError, setInterestError] = useState(false)
     const [numYearsError, setNumYearsError] = useState(false)
 
+    
     function changeHandler(input, value) {
         if (input === 'current-savings') {
             setInputData(prevValues => {

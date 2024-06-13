@@ -223,21 +223,21 @@ describe("Investment Calculator", () => {
       cy.get('[data-cy="field1"]').type("1000");
       cy.get('[data-cy="field2"]').type("5");
     });
-    it("Interest Rate - Lower Limit", () => {
+    it("Investment Period - Lower Limit", () => {
       cy.get('[data-cy="field3"]').type("1");
       cy.get('[data-cy="calculate-button"]').click();
       cy.get('[data-cy="field3"]').then(($input) => {
         expect($input[0].validationMessage).to.eq("");
       });
     });
-    it("Interest Rate - Upper limit", () => {
+    it("Investment Period - Upper limit", () => {
       cy.get('[data-cy="field3"]').type("1000");
       cy.get('[data-cy="calculate-button"]').click();
       cy.get('[data-cy="field3"]').then(($input) => {
         expect($input[0].validationMessage).to.eq("");
       });
     });
-    it("Interest Rate - Lower Limit", () => {
+    it("Investment Period - Lower Limit", () => {
       cy.get('[data-cy="field3"]').type("0.99");
       cy.get('[data-cy="calculate-button"]').click();
       cy.get('[data-cy="field3"]').then(($input) => {
@@ -246,7 +246,7 @@ describe("Investment Calculator", () => {
         );
       });
     });
-    it("Interest Rate - Validate on negative number", () => {
+    it("Investment Period - Validate on negative number", () => {
       cy.get('[data-cy="field3"]').type("-1");
       cy.get('[data-cy="calculate-button"]').click();
       cy.get('[data-cy="field3"]').then(($input) => {
@@ -255,7 +255,7 @@ describe("Investment Calculator", () => {
         );
       });
     });
-    it("Interest Rate - Validate over upper limit", () => {
+    it("Investment Period - Validate over upper limit", () => {
       cy.get('[data-cy="field3"]').type("1000.01");
       cy.get('[data-cy="calculate-button"]').click();
       cy.get('[data-cy="field3"]').then(($input) => {
@@ -264,14 +264,14 @@ describe("Investment Calculator", () => {
         );
       });
     });
-    it("Interest Rate - Validate blank entry", () => {
+    it("Investment Period - Validate blank entry", () => {
       cy.get('[data-cy="field3"]').clear();
       cy.get('[data-cy="calculate-button"]').click();
       cy.get('[data-cy="field3"]').then(($input) => {
         expect($input[0].validationMessage).to.eq("Please fill in this field.");
       });
     });
-    it("Interest Rate - Non Numeric Entry", () => {
+    it("Investment Period - Non Numeric Entry", () => {
       cy.get('[data-cy="field3"]')
         .type('abcdef!£$"%^&*()@)')
         .should("have.value", "");
