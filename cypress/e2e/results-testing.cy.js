@@ -2,7 +2,7 @@ import { testData } from "../fixtures/test-data";
 
 describe("Check the app is correctly calculating", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173/investment-calc/");
+    cy.visit("http://localhost:5173/investment-calc-with-cypress/");
   });
 
   for (let x = 0; x < testData.length; x++) {

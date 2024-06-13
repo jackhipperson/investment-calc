@@ -1,6 +1,6 @@
 describe("Investment Calculator", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:5173/investment-calc/");
+    cy.visit("http://localhost:5173/investment-calc-with-cypress/");
   });
 
   context("Page Load", () => {
