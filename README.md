@@ -35,6 +35,7 @@ https://jackhipperson.github.io/investment-calc-with-cypress/
 - **React**: For structuring the webpage.
 - **TailwindCSS**: For styling the webpage.
 - **JavaScript**: For implementing the investment calculation logic.
+- **Cypress**: For automated testing of the structure, styling and calculation logic.
 
 ## How to Run Locally
 
