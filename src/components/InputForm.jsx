@@ -18,7 +18,7 @@ function InputForm(props) {
     const [interestError, setInterestError] = useState(false)
     const [numYearsError, setNumYearsError] = useState(false)
 
-    
+
     function changeHandler(input, value) {
         if (input === 'current-savings') {
             setInputData(prevValues => {
@@ -99,19 +99,19 @@ function InputForm(props) {
                 <div className="grid grid-flow-row-dense grid-cols-2 p-2 items-end">
                     <div className="flex flex-col items-start p-2">
                         <label className="text-white text-left text-bold w-[100%]" data-cy="label0">CURRENT SAVINGS (£)</label>
-                        <input type="number" min="0.00" step="0.01" max="1000000000.00" required data-cy="field0" className={currentError ? errorStyle : noErrorStyle} value={inputData.currentSavings} onChange={(event) => changeHandler('current-savings', event.target.value)}></input>
+                        <input type="number" min="0.00" step="0.01" max="1000000000.00" data-cy="field0" className={currentError ? errorStyle : noErrorStyle} value={inputData.currentSavings} onChange={(event) => changeHandler('current-savings', event.target.value)}></input>
                     </div>
                     <div className="flex flex-col items-start p-2">
                         <label className="text-white text-left text-bold w-[100%]" data-cy="label1">YEARLY SAVINGS (£)</label>
-                        <input type="number" min="0.00" step="0.01" max="1000000000.00" required data-cy="field1" className={yearlyError ? errorStyle : noErrorStyle} value={inputData.yearlySavings} onChange={(event) => changeHandler('yearly-savings', event.target.value)}></input>
+                        <input type="number" min="0.00" step="0.01" max="1000000000.00" data-cy="field1" className={yearlyError ? errorStyle : noErrorStyle} value={inputData.yearlySavings} onChange={(event) => changeHandler('yearly-savings', event.target.value)}></input>
                     </div>
                     <div className="flex flex-col items-start p-2">
                         <label className="text-white text-left text-bold w-[100%]" data-cy="label2">EXPECTED INTEREST RATE (%) PER YEAR</label>
-                        <input type="number" min="0.01" step="0.01" max="500000.00" required data-cy="field2" className={interestError ? errorStyle : noErrorStyle} value={inputData.interestRate} onChange={(event) => changeHandler('interest-rate', event.target.value)}></input>
+                        <input type="number" min="0.01" step="0.01" max="500000.00" data-cy="field2" className={interestError ? errorStyle : noErrorStyle} value={inputData.interestRate} onChange={(event) => changeHandler('interest-rate', event.target.value)}></input>
                     </div>
                     <div className="flex flex-col items-start p-2">
                         <label className="text-white text-left text-bold w-[100%]" data-cy="label3">INVESTMENT PERIOD (YEARS)</label>
-                        <input type="number" min="1" step="1" max="1000" data-cy="field3" required className={numYearsError ? errorStyle : noErrorStyle} value={inputData.numYears} onChange={(event) => changeHandler('num-years', event.target.value)}></input>
+                        <input type="number" min="1" step="1" max="1000" data-cy="field3" className={numYearsError ? errorStyle : noErrorStyle} value={inputData.numYears} onChange={(event) => changeHandler('num-years', event.target.value)}></input>
                     </div>
                 </div>
                 <div className="p-4">

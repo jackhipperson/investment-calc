@@ -84,18 +84,20 @@ describe("Investment Calculator", () => {
     it("Current Savings - Validate blank entry", () => {
       cy.get('[data-cy="field0"]').clear();
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field0"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field0"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
     });
+
     it("Current Savings - Non Numeric Entry", () => {
       cy.get('[data-cy="field0"]')
         .type('abcdef!£$"%^&*()@)')
         .should("have.value", "");
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field0"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field0"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
+      cy.get('[data-cy="field0"]').should("contain", "");
     });
   });
 
@@ -138,18 +140,19 @@ describe("Investment Calculator", () => {
     it("Yearly Savings - Validate blank entry", () => {
       cy.get('[data-cy="field1"]').clear();
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field1"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field1"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
     });
     it("Yearly Savings - Non Numeric Entry", () => {
       cy.get('[data-cy="field1"]')
         .type('abcdef!£$"%^&*()@)')
         .should("have.value", "");
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field1"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field1"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
+      cy.get('[data-cy="field1"]').should("contain", "");
     });
   });
 
@@ -202,18 +205,19 @@ describe("Investment Calculator", () => {
     it("Interest Rate - Validate blank entry", () => {
       cy.get('[data-cy="field2"]').clear();
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field2"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field2"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
     });
     it("Interest Rate - Non Numeric Entry", () => {
       cy.get('[data-cy="field2"]')
         .type('abcdef!£$"%^&*()@)')
         .should("have.value", "");
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field2"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field2"]').should("contain", "");
+      cy.get('[data-cy="field2"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
     });
   });
 
@@ -267,20 +271,19 @@ describe("Investment Calculator", () => {
     it("Investment Period - Validate blank entry", () => {
       cy.get('[data-cy="field3"]').clear();
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field3"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field3"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
     });
     it("Investment Period - Non Numeric Entry", () => {
       cy.get('[data-cy="field3"]')
         .type('abcdef!£$"%^&*()@)')
         .should("have.value", "");
       cy.get('[data-cy="calculate-button"]').click();
-      cy.get('[data-cy="field3"]').then(($input) => {
-        expect($input[0].validationMessage).to.eq("Please fill in this field.");
-      });
+      cy.get('[data-cy="field3"]').should("contain", "");
+      cy.get('[data-cy="field3"]')
+        .should("have.css", "background-color")
+        .and("eq", "rgb(153, 27, 27)");
     });
   });
 });
-
-// cy.get('[data-cy="field0"]').should('have.css', 'background-color').and('eq', 'rgb(153 27 27 / var(--tw-bg-opacity))');
